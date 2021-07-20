@@ -1,0 +1,55 @@
+html {
+    width: 350px;
+    height: 1000px;
+    background-color: #353535;;
+}
+
+body {
+    width: 95%;
+    height: 80%;
+}
+
+img {
+    width: "10%";
+    height: "auto";
+    display: "flex";
+    padding-left: 5%;
+    padding-top: 5%;
+    align-items: "center";
+}
+
+h1 {
+    float: right;
+    text-align: center;
+    color: white;
+    width: 75%;
+    height: auto;
+}
+
+#menu {
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    width: 100%;
+    height: 5%;
+    border-bottom: 1px white dashed;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    width: 70%;
+    height: 100%;
+}
+
+input {
+    float: left;
+    width: 20%;
+    height: 80%;
+}

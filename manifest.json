@@ -1,0 +1,38 @@
+{
+    "name": "Dynatrace Favorites Editor",
+    "version": "1.0",
+    "description": "This extension allows for persisting Favorites preferences between Dynatrace environments.",
+    "permissions": ["activeTab","tabs", "declarativeContent", "storage"],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon" : {
+            "16": "images/favicon-16x16.png",
+            "32": "images/favicon-32x32.png",
+            "48": "images/favicon-48x48.png",
+            "128": "images/favicon-128x128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.dynatracelabs.com/*"],
+            "run_at": "document_end",
+            "js": ["js/setUserVariables.js"]
+        },
+        {
+            "matches": ["https://*.live.dynatrace.com/*"],
+            "run_at": "document_end",
+            "js": ["js/setUserVariables.js"]
+        }
+    ],
+    "icons": {
+        "16": "images/favicon-16x16.png",
+        "32": "images/favicon-32x32.png",
+        "48": "images/favicon-48x48.png",
+        "128": "images/favicon-128x128.png"
+    },
+    "manifest_version": 2
+}
