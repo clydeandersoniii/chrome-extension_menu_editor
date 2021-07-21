@@ -36,3 +36,7 @@
   #expandbutton {
       float: right;
   }
+
+  #sections {
+    display: none;
+  }

@@ -32,12 +32,13 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
 });
 
 
-//listener waiting for requests for the favorites list
+//listener waiting for requests for the favorites/groups list
 chrome.runtime.onMessageExternal.addListener(
     async function(request, sender, sendResponse) {    
         if (request.bool){
-            let body = await getFavorites();
-            sendResponse({payload: body});
+            let favList = await getFavorites();
+            let groupList = await getGroups();
+            sendResponse({favs: favList, groups: groupList});
         }
     }
 );
@@ -57,6 +58,34 @@ async function getFavorites()
 //format favorites list to an array
 //example format: "[\"dashboardsLink\",\"dataExplorerLink\"]"
 function formatFavorites(data) {
+    let output = '[\"';
+
+    for (i = 0; i < data.length - 1; i++) {
+        output = output + data[i] + '\",\"';
+    }
+
+    output = output + data[data.length - 1] + '\"]';
+
+    console.log(output);
+
+    return output;
+}
+
+//get the groups list from chrome storage, format it, and return it
+async function getGroups()
+{
+    return new Promise((resolve, reject) => {
+        chrome.storage.sync.get(['groups'], resolve);
+    })
+    .then(result => {
+        return formatFavorites(result.groups);
+    });
+}
+
+
+//format favorites list to an array
+//example format: "[\"dashboardsLink\",\"dataExplorerLink\"]"
+function formatGroups(data) {
     let output = '[\"';
 
     for (i = 0; i < data.length - 1; i++) {

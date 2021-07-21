@@ -7,8 +7,10 @@ function configureUserVariables () {
     //connect to the extension from the webpage to grab the new userVariables to set them
     chrome.runtime.sendMessage(extensionId, {bool: true}, null,  
         function(response) {
-            console.log('response from background: ' + response.payload);
-            userVariables['nav-menu-favorites'] = response.payload;
+            console.log('favorites list: ' + response.favs);
+            console.log('groups list: ' + response.groups);
+            userVariables['nav-menu-favorites'] = response.favs;
+            userVariables['nav-menu-expanded-groups'] = response.groups;
         }
     ); 
 }
