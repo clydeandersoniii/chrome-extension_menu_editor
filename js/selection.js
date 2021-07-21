@@ -11,3 +11,16 @@ function updateFavoritesChrome() {
         console.log(favList.length ? 'favorites updated to ' + favList : 'favorites list empty!');
     });
 }
+
+function updateGroupsChrome() {
+    let groupList = [];
+    for (i = 0; i < groups.length; i++){
+        if (groups[i].checked){
+            groupList.push(groups[i].value);
+        }
+    }
+
+    chrome.storage.sync.set({groups: groupList}, function () {
+        console.log(groupList.length ? 'groups updated to ' + groupList : 'groups list empty!');
+    });
+}

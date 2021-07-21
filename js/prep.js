@@ -1,5 +1,6 @@
 //all checkboxes are of class='option'
 let options = document.getElementsByClassName("option");
+let groups = document.getElementsByClassName("group");
 
 //add change listener to all checkboxes to update the fav list
 for (i = 0; i < options.length; i++) {
@@ -8,7 +9,14 @@ for (i = 0; i < options.length; i++) {
     });
 };
 
-//check any boxes that are already selected from previous session
+//add change listener to all checkboxes to update the group list
+for (i = 0; i < groups.length; i++) {
+    groups[i].addEventListener('change', () => {
+        updateGroupsChrome();
+    });
+};
+
+//check any fav boxes that are already selected from previous session
 chrome.storage.sync.get(['favorites'], (data) => {
     for (i = 0; i < options.length; i++) {
         //get value of the checkbox we're observing
@@ -17,6 +25,19 @@ chrome.storage.sync.get(['favorites'], (data) => {
         //if the favList contains the value, we'll check the box
         if (data.favorites.includes(value)) {
             options[i].checked = true;
+        }
+    }
+});
+
+//check any group boxes that are already selected from previous session
+chrome.storage.sync.get(['groups'], (data) => {
+    for (i = 0; i < groups.length; i++) {
+        //get value of the checkbox we're observing
+        value = groups[i].value;
+
+        //if the favList contains the value, we'll check the box
+        if (data.groups.includes(value)) {
+            groups[i].checked = true;
         }
     }
 });
