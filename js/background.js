@@ -13,7 +13,7 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
             }),
             //Sprint environments - for testing
             new chrome.declarativeContent.PageStateMatcher({
-                pageUrl: {hostContains:"sprint.dynatracelabs"}
+                pageUrl: {hostContains:"dynatracelabs"}
             }),
             //Prod Managed environments
             new chrome.declarativeContent.PageStateMatcher({

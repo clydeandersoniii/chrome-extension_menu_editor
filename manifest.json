@@ -19,7 +19,7 @@
     "content_scripts": [
         {
             "exclude_matches":["https://sso-sprint.dynatracelabs.com/*"],
-            "matches": ["https://*.sprint.dynatracelabs.com/*",
+            "matches": ["https://*.dynatracelabs.com/*",
                 "https://*.live.dynatrace.com/*",
                 "https://*.managed.internal.dynatrace.com:*/e/*",
                 "https://*.managed-dev.internal.dynatracelabs.com:*/e/*"],
@@ -29,7 +29,7 @@
     ],
     "web_accessible_resources": ["js/messenger.js"],
     "externally_connectable": {
-        "matches": ["https://*.sprint.dynatracelabs.com/*",
+        "matches": ["https://*.dynatracelabs.com/*",
             "https://*.live.dynatrace.com/*",
             "https://*.managed.internal.dynatrace.com:*/e/*",
             "https://*.managed-dev.internal.dynatracelabs.com:*/e/*"]
