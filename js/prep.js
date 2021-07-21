@@ -4,7 +4,7 @@ let options = document.getElementsByClassName("option");
 //add change listener to all checkboxes to update the fav list
 for (i = 0; i < options.length; i++) {
     options[i].addEventListener('change', () => {
-        updateFavorites();
+        updateFavoritesChrome();
     });
 };
 

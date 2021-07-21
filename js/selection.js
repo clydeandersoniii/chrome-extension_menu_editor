@@ -1,5 +1,5 @@
 //everytime a checkbox is checked/unchecked we'll blindly update the entire list
-function updateFavorites () {
+function updateFavoritesChrome() {
     let favList = [];
     for (i = 0; i < options.length; i++){
         if (options[i].checked){
