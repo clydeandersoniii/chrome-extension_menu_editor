@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/toggle.css">
+    <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/structure.css">
 </head>
 
@@ -11,7 +11,11 @@
     <h1>Dynatrace Favorites Editor</h1>
     </br></br></br>
     <h3>Refresh page to apply changes.</h3>
-    <div id="menu">
+    <div class='tab'>
+        <button class='tablinks' id='favbutton' style='background-color:#0075ff;color:white;'>Favorites Preferences</button>
+        <button class='tablinks' id='expandbutton'>Expanded Preferences</button>
+    </div>
+    <div id="menu" class='tabcontent' display='block'>
         <div class="row"> <input class="option" type="checkbox" value="applicationSecurityOverviewLink"><label>Application Security Overview*</label> </div>
         <div class="row"> <input class="option" type="checkbox" value="awsLink"> <label>AWS</label> </div>
         <div class="row"> <input class="option" type="checkbox" value="azuresLink"> <label>Azure</label> </div>
@@ -62,10 +66,14 @@
             <input class="option" type="checkbox" id="aws" value="awsLink">
             <span class="slider round"></span>
         </label>-->
+        <p>*Not yet available</p>
     </div>
-    <p>*Not yet available</p>
+    <div id="sections" class='tabcontent' display='none'>
+        <div class="row"> <input class="option" type="checkbox" value="webApplicationsLink"> <label>Test</label> </div>
+    </div>
     <script src="js/selection.js"></script>
     <script src="js/prep.js"></script>
+    <script src="js/tabChange.js"></script>
 </body>
 
 </html>
