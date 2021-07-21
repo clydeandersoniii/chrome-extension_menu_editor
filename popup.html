@@ -7,14 +7,15 @@
 </head>
 
 <body>
-    <img src="images/dyna_fav48.png">
-    <h1>Dynatrace Favorites Editor</h1>
+    <div id='head'>
+        <div class='container'><img src="images/dyna_fav96.png"></div>
+        <h1>Dynatrace Menu Editor</h1>
+    </div>  
     </br></br>
     <h3>Refresh page to apply changes.</h3>
     <div class='tab'>
-        <button class='tablinks' id='favbutton' style='background-color:#0075ff;color:white;'>Favorites
-            Preferences</button>
-        <button class='tablinks' id='expandbutton'>Expanded Preferences</button>
+        <button class='tablinks' id='favbutton' style='background-color:#0075ff;color:white;' title='Items selected here will appear in the Favorites section of the left-hand menu.'>Favorites Preferences</button>
+        <button class='tablinks' id='expandbutton' title='Groups selected here will be expanded by default in the left-hand menu.'>Expanded Preferences</button>
     </div>
     <div id="menu" class='tabcontent' display='block'>
         <!-- <div class="row"> <input class="option" type="checkbox" value="applicationSecurityOverviewLink"><label>Application Security Overview*</label> </div> -->
@@ -62,11 +63,6 @@
         <div class="row"> <input class="option" type="checkbox" value="vmWareLink"> <label>VMware</label> </div>
         <div class="row"> <input class="option" type="checkbox" value="securityLink"> <label>Vulnerabilities</label> </div>
         <div class="row"> <input class="option" type="checkbox" value="webApplicationsLink"> <label>Web</label> </div>
-        <!--<h2>AWS</h2>
-        <label class="switch">
-            <input class="option" type="checkbox" id="aws" value="awsLink">
-            <span class="slider round"></span>
-        </label>-->
         <!-- <p>*Not yet available</p> -->
     </div>
     <div id="sections" class='tabcontent'>

@@ -1,7 +1,7 @@
 {
-    "name": "Dynatrace Favorites Editor",
-    "version": "1.0",
-    "description": "This extension allows for persisting Favorites preferences between Dynatrace environments.",
+    "name": "Dynatrace Menu Editor",
+    "version": "1.0.0",
+    "description": "This extension allows for persisting menu preferences between Dynatrace environments.",
     "permissions": ["activeTab","tabs","declarativeContent", "storage"],
     "background": {
         "scripts": ["js/background.js"],
