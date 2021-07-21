@@ -18,7 +18,7 @@
     },
     "content_scripts": [
         {
-            "exclude_matches":["https://sso-sprint.dynatracelabs.com/*"],
+            "exclude_matches":["https://sso-sprint.dynatracelabs.com/*", "https://sso-dev.dynatracelabs.com/*"],
             "matches": ["https://*.dynatracelabs.com/*",
                 "https://*.live.dynatrace.com/*",
                 "https://*.managed.internal.dynatrace.com:*/e/*",
