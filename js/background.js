@@ -25,6 +25,10 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
             //Dev Managed environments
             new chrome.declarativeContent.PageStateMatcher({
                 pageUrl: {hostContains:"managed-dev.internal.dynatracelabs.com"}
+            }),
+            //localhost
+            new chrome.declarativeContent.PageStateMatcher({
+                pageUrl: {hostContains:"localhost"}
             })
         ],
             actions: [new chrome.declarativeContent.ShowPageAction()]
