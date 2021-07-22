@@ -1,10 +1,7 @@
 chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.sync.set({favorites: []}, function() {
-        console.log("favorites array initialized");
+    chrome.storage.sync.set({favorites: [],groups: [],devops: false}, function() {
+        console.log("favorites array initialized\ngroups array initialized\ndevops set to false");
     });
-    chrome.storage.sync.set({groups: [], function() {
-        console.log("groups array intialized")
-    }})
 });
 
 chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {

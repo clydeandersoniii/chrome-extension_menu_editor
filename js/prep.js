@@ -1,3 +1,18 @@
+//when the popup loads, we will check if devops is enabled, if so,
+//we will show/hide the devops options accordingly.
+window.onload = () => {
+    let devbool;
+    let rows = document.getElementsByClassName('devrow');
+
+    chrome.storage.sync.get(['devops'], (data) => {
+        devbool = data.devops;
+        
+        for (i = 0; i < rows.length; i++) {
+            rows[i].style.display = devbool ? 'block' : 'none';
+        };
+    });
+}
+
 //all checkboxes are of class='option'
 let options = document.getElementsByClassName("option");
 let groups = document.getElementsByClassName("group");

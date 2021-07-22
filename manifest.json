@@ -16,6 +16,7 @@
             "128": "images/dyna_fav128.png"
         }
     },
+    "options_page": "options.html",
     "content_scripts": [
         {
             "exclude_matches":["https://sso-sprint.dynatracelabs.com/*", "https://sso-dev.dynatracelabs.com/*"],
