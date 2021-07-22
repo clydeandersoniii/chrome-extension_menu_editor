@@ -2,7 +2,7 @@
 //we will show/hide the devops options accordingly.
 window.onload = () => {
     let devbool;
-    let rows = document.getElementsByClassName('devrow');
+    let rows = document.getElementsByClassName('dev');
 
     chrome.storage.sync.get(['devops'], (data) => {
         devbool = data.devops;

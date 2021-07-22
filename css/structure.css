@@ -1,33 +1,31 @@
 html {
     width: 350px;
-    height: 1050px;
+    height: 600px;
     background-color: #242424;
 }
 
 body {
     width: 95%;
-    height: 80%;
+    height: 95%;
 }
 
 #head {
     width: 100%;
 }
 
-.container {
-    padding-left: 15px;
-    width: 25%;
-}
-
 img {
-    float:left;
+    width:15%;
+    height:auto;
+    display: inline-block;
+    padding-top: 13px;
+    padding-left: 10px;
 }
 
 h1 {
     float: right;
     text-align: center;
     color: white;
-    width: 65%;
-    height: auto;
+    width: 80%;
 }
 
 h3 {
@@ -37,17 +35,28 @@ h3 {
     color: red;
     font-weight: lighter;
     clear: both;
-    padding-top: 25px;
+}
+
+.wrapper {
+    height:75%;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px white solid;
 }
 
 #menu, #sections {
     width: 100%;
-    height: 90%;
+    height: 1000px;
+    padding-top: 0px;
+    clear: both;
+    overflow-y: scroll;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; /* So the width will be 100% + 17px */
 }
 
 .row {
-    width: 100%;
-    height: 5%;
+    width: auto;
+    height: 34px;
     border-top: 1px white dashed;
     color: white;
 }
@@ -69,19 +78,19 @@ input {
     height: 80%;
 }
 
-.devrow {
-    width: 100%;
-    height: 5%;
-    border-top: dashed white 1px;
+.dev {
     color: red;
     display: none;
 }
 
-p {
-    color: white;
+.filler {
+    width: 100%;
+    height:100%;
+}
+
+.disclaimer p {
+    color: red;
     text-align: center;
     width: 100%;
-    height: 3%;
-    clear: both;
-    padding-top: 2% ;
+    margin-top: 4px;
 }

@@ -24,4 +24,7 @@ function changeTab(evt, tab) {
         document.getElementById('favbutton').style.backgroundColor = '#ccc';
         document.getElementById('favbutton').style.color = 'black';
     }
+
+    //scroll to the top :D
+    document.getElementById(tab).scroll(0,0);
 }

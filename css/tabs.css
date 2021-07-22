@@ -22,12 +22,6 @@
   .tab button:hover {
     background-color: #ddd;
   }
-  
-  /* Style the tab content */
-  .tabcontent {
-    padding-top: 20px;
-    clear: both;
-  }
 
   #favbutton {
       float: left;
