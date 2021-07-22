@@ -1,7 +1,7 @@
 html {
     width: 350px;
     height: 1050px;
-    background-color: #353535;
+    background-color: #242424;
 }
 
 body {
@@ -48,14 +48,15 @@ h3 {
 .row {
     width: 100%;
     height: 5%;
-    border-bottom: 1px white dashed;
+    border-top: 1px white dashed;
+    color: white;
 }
 
 label {
     display: flex;
     align-items: center;
     text-align: left;
-    color: white;
+    color: inherit;
     font-size: 15px;
     font-weight: bold;
     width: 70%;
@@ -66,6 +67,13 @@ input {
     float: left;
     width: 20%;
     height: 80%;
+}
+
+.devrow {
+    width: 100%;
+    height: 5%;
+    border-top: dashed white 1px;
+    color: red;
 }
 
 p {
