@@ -24,7 +24,7 @@
                 "https://*.live.dynatrace.com/*",
                 "https://*.managed.internal.dynatrace.com:*/e/*",
                 "https://*.managed-dev.internal.dynatracelabs.com:*/e/*",
-                "https://localhost:*/*"],
+                "http://localhost:*/*"],
             "run_at": "document_end",
             "js": ["js/injectScript.js"]
         }
@@ -35,7 +35,7 @@
             "https://*.live.dynatrace.com/*",
             "https://*.managed.internal.dynatrace.com:*/e/*",
             "https://*.managed-dev.internal.dynatracelabs.com:*/e/*",
-            "https://localhost:*/*"]
+            "http://localhost:*/*"]
     },
     "icons": {
         "16": "images/dyna_fav16.png",
