@@ -29,12 +29,32 @@ h1 {
 }
 
 h3 {
-    width:100%;
-    float: center;
-    text-align: center;
+    width:60%;
+    float: right;
+    text-align: left;
     color: red;
     font-weight: lighter;
     clear: both;
+    padding-right: 10%;
+}
+
+.container {
+    width: 10%;
+    height: auto;
+    float:left;
+    padding-left: 18%;
+    padding-top: 3%;
+}
+
+[type='image'] {
+    float: right;
+    width: 70%;
+    height: auto;
+    background: #f1f1f1;
+}
+
+[type='image']:hover {
+    background: #ccc;
 }
 
 .wrapper {

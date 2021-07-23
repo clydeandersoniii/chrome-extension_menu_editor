@@ -60,3 +60,10 @@ chrome.storage.sync.get(['groups'], (data) => {
 //prep the tab buttons
 document.getElementById('favbutton').addEventListener('click', () => {changeTab(event, 'menu');});
 document.getElementById('expandbutton').addEventListener('click', () => {changeTab(event, 'sections');});
+
+//setup refresh button
+document.getElementById("refreshbutton").onclick = function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.reload();
+    });
+};
