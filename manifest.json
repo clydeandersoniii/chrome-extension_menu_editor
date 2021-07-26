@@ -22,9 +22,9 @@
             "exclude_matches":["https://sso-sprint.dynatracelabs.com/*", "https://sso-dev.dynatracelabs.com/*"],
             "matches": ["https://*.dynatracelabs.com/*",
                 "https://*.live.dynatrace.com/*",
-                "https://*.managed.internal.dynatrace.com:*/e/*",
-                "https://*.managed-dev.internal.dynatracelabs.com:*/e/*",
-                "http://localhost:*/*"],
+                "https://*.managed.internal.dynatrace.com/e/*",
+                "https://*.managed-dev.internal.dynatracelabs.com/e/*",
+                "http://localhost/*"],
             "run_at": "document_end",
             "js": ["js/injectScript.js"]
         }
@@ -33,9 +33,9 @@
     "externally_connectable": {
         "matches": ["https://*.dynatracelabs.com/*",
             "https://*.live.dynatrace.com/*",
-            "https://*.managed.internal.dynatrace.com:*/e/*",
-            "https://*.managed-dev.internal.dynatracelabs.com:*/e/*",
-            "http://localhost:*/*"]
+            "https://*.managed.internal.dynatrace.com/e/*",
+            "https://*.managed-dev.internal.dynatracelabs.com/e/*",
+            "http://localhost/*"]
     },
     "icons": {
         "16": "images/dyna_fav16.png",
