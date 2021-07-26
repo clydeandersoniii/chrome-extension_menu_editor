@@ -110,7 +110,14 @@ input {
 
 .disclaimer p {
     color: red;
-    text-align: center;
-    width: 100%;
+    text-align: left;
+    margin-top: 4px;
+    float: left;
+}
+
+a {
+    color: white;
+    text-align: right;
+    float: right;
     margin-top: 4px;
 }
