@@ -1,4 +1,4 @@
-//add change listener to all checkboxes to update the fav list
+//add event listener to checkbox to update devops setting
 console.log('setting listener')
 document.getElementById('enableDevops').addEventListener('change', () => {
     toggleDevops(document.getElementById('enableDevops').checked);

@@ -1,5 +1,5 @@
 //injects messenger.js into the webpage
-console.log('injecting messenger.js ...')
+console.log('Dynatrace Favorites Editor - injecting messenger.js ...')
 
 var s = document.createElement('script');
 s.src = chrome.extension.getURL('js/messenger.js');

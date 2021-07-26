@@ -67,8 +67,6 @@ function formatFavorites(data) {
 
     output = output + data[data.length - 1] + '\"]';
 
-    console.log(output);
-
     return output;
 }
 
@@ -94,8 +92,6 @@ function formatGroups(data) {
     }
 
     output = output + data[data.length - 1] + '\"]';
-
-    console.log(output);
 
     return output;
 }

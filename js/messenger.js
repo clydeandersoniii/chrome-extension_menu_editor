@@ -2,13 +2,13 @@
 window.onload = configureUserVariables();
 
 function configureUserVariables () {
-    console.log('attempting to configure userVariables...');
+    console.log('Dynatrace Favorites Editor - attempting to configure userVariables...');
 
     //connect to the extension from the webpage to grab the new userVariables to set them
     chrome.runtime.sendMessage(extensionId, {bool: true}, null,  
         function(response) {
-            console.log('favorites list: ' + response.favs);
-            console.log('groups list: ' + response.groups);
+            console.log('Dynatrace Favorites Editor - favorites list: ' + response.favs);
+            console.log('Dynatrace Favorites Editor - groups list: ' + response.groups);
             userVariables['nav-menu-favorites'] = response.favs;
             userVariables['nav-menu-expanded-groups'] = response.groups;
         }
