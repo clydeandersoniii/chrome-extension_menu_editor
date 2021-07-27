@@ -2,7 +2,7 @@
     "name": "Dynatrace Menu Editor",
     "version": "1.0.0",
     "description": "This extension allows for persisting menu preferences between Dynatrace environments.",
-    "permissions": ["activeTab","tabs","declarativeContent", "storage"],
+    "permissions": ["tabs","declarativeContent", "storage"],
     "background": {
         "scripts": ["js/background.js"],
         "persistent": false

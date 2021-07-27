@@ -13,7 +13,7 @@ s.onload = function() {
 //dynamically get the extensionId and set it as a variable in the webpage.
 //this will then be available in the messenger.js to call for sending messages back to background.js
 var script = document.createElement('script');
-script.textContent = "var extensionId = " + JSON.stringify(chrome.runtime.id);
+script.textContent = "var dynatraceMenuEditorId = " + JSON.stringify(chrome.runtime.id);
 (document.head||document.documentElement).appendChild(script);
 script.parentNode.removeChild(script);
 

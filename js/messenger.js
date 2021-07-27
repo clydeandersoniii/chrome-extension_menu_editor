@@ -5,7 +5,7 @@ function configureUserVariables () {
     console.log('Dynatrace Favorites Editor - attempting to configure userVariables...');
 
     //connect to the extension from the webpage to grab the new userVariables to set them
-    chrome.runtime.sendMessage(extensionId, {bool: true}, null,  
+    chrome.runtime.sendMessage(dynatraceMenuEditorId, {bool: true}, null,  
         function(response) {
             console.log('Dynatrace Favorites Editor - favorites list: ' + response.favs);
             console.log('Dynatrace Favorites Editor - groups list: ' + response.groups);
