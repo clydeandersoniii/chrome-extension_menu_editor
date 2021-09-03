@@ -19,12 +19,27 @@
     "options_page": "options.html",
     "content_scripts": [
         {
-            "exclude_matches":["https://sso-sprint.dynatracelabs.com/*", "https://sso-dev.dynatracelabs.com/*"],
+            "exclude_matches":["https://sso-sprint.dynatracelabs.com/*", 
+                "https://sso-dev.dynatracelabs.com/*",
+                "https://*.dynatrace-managed.com/e/*/login*",
+                "https://*.dynatrace-managed.com/e/*/rest-api-doc/*",
+                "https://*.dynatracelabs.com/rest-api-doc/*",
+                "https://*.live.dynatrace.com/rest-api-doc/*",
+                "https://*.managed.internal.dynatrace.com/e/*/rest-api-doc/*",
+                "https://*.managed-dev.internal.dynatracelabs.com/e/*/rest-api-doc/*",
+                "http://localhost/*/rest-api-doc/*",
+                "https://*.dynatrace-managed.com/e/*/debugui/*",
+                "https://*.dynatracelabs.com/debugui/*",
+                "https://*.live.dynatrace.com/debugui/*",
+                "https://*.managed.internal.dynatrace.com/e/*/debugui/*",
+                "https://*.managed-dev.internal.dynatracelabs.com/e/*/debugui/*",
+                "http://localhost/*/debugui/*"],
             "matches": ["https://*.dynatracelabs.com/*",
                 "https://*.live.dynatrace.com/*",
                 "https://*.managed.internal.dynatrace.com/e/*",
                 "https://*.managed-dev.internal.dynatracelabs.com/e/*",
-                "http://localhost/*"],
+                "http://localhost/*",
+                "https://*.dynatrace-managed.com/e/*"],
             "run_at": "document_end",
             "js": ["js/injectScript.js"]
         }
@@ -35,7 +50,8 @@
             "https://*.live.dynatrace.com/*",
             "https://*.managed.internal.dynatrace.com/e/*",
             "https://*.managed-dev.internal.dynatracelabs.com/e/*",
-            "http://localhost/*"]
+            "http://localhost/*",
+            "https://*.dynatrace-managed.com/e/*"]
     },
     "icons": {
         "16": "images/dyna_fav16.png",
